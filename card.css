@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* custom properties */
+:root{
+    --color-fondo: linear-gradient(to top,#bd4c4c9e, #004ec291);
+    --color-fondo-shadow: #bd4c4c;
+    --color-pantalon: #004fc3;
+    --color-button: #2572ff;
+    --color-card: #e2e3e4;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: rgba(100% 50% 30% / 80%); */
+    background-image: 
+        linear-gradient(to top left, steelblue 20% 40%, orange 60% 80%);
+    background-repeat: no-repeat;
+    
+}
+.img{
+    width: 100%;
+}
+/* container */
+.card{
+    border-radius: 30px;
+    width: 320px;
+    margin: 300px auto;
+    background: var(--color-card);
+    box-shadow: 0 0 8px -6px rgba(0, 0, 0, 0.516);
+}
+.card__figure{
+    background: var(--color-fondo);
+    height: 300px;
+    border-radius: 30px;
+    position: relative;
+}
+/* Mario image */
+.card__character{
+    /* para crear el efecto de subida, ya que es hijo de card_figure */
+    position: absolute;
+    bottom: -5px;
+    /* para centrarlo */
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 90%;
+    /* size is bigger that his container */
+    /* background-color: black; */
+    /* Mario's shadow */
+    filter:
+    drop-shadow(2px 2px 10px var(--color-fondo-shadow));
+}
+.card__text{
+    padding: 2rem;
+    width: 95%;
+    margin: 0 auto; 
+    
+}
+.title{
+    font-size: 1.7rem;
+    margin-bottom: 18px;
+}
+.paragraph{
+    color: #a1a5ac;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+.cta{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    background-color: var(--color-button);
+    padding: 1rem 0;
+    border-radius: 10px;
+    margin: 0 auto;
+}
